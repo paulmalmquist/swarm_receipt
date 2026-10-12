@@ -1,0 +1,12 @@
+schema_version: 1
+idea_id: paulos-app-2026-10-11-swarm-impact-receipt
+title: Swarm Impact Receipt
+repository_slug: swarm_receipt
+state: portable_demo
+type: extension
+primary_metric: on_time_outcome_closure_rate
+baseline: unknown_measure_prospectively
+storage: sqlite_and_content_addressed_json
+mode: synthetic_local
+model_calls: 0
+production_adapters: unavailable

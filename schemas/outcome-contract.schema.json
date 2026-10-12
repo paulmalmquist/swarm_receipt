@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outcome contract input v1",
+  "type": "object",
+  "required": [
+    "title",
+    "action_id",
+    "decision_id",
+    "profile",
+    "owner",
+    "metric_owner",
+    "method",
+    "threshold",
+    "guardrail_limit",
+    "baseline_days",
+    "start_day",
+    "end_day",
+    "lag_days",
+    "sla_days",
+    "min_count",
+    "freshness_hours",
+    "max_bytes",
+    "scenario",
+    "seed",
+    "confounders",
+    "plan_ref",
+    "config_ref",
+    "cohort_ref",
+    "rationale"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "action_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.:-]{2,119}$"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.:-]{2,119}$"
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "enum": [
+        "quality",
+        "query",
+        "lineage"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "enum": [
+        "action-owner"
+      ]
+    },
+    "metric_owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "enum": [
+        "metric-owner"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "enum": [
+        "matched_comparison",
+        "before_after",
+        "associated_only"
+      ]
+    },
+    "threshold": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 10000
+    },
+    "guardrail_limit": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "baseline_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 90
+    },
+    "start_day": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 89
+    },
+    "end_day": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 90
+    },
+    "lag_days": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 30
+    },
+    "sla_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "min_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000
+    },
+    "freshness_hours": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 168
+    },
+    "max_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "scenario": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "enum": [
+        "improved",
+        "harmed",
+        "guardrail",
+        "no_change",
+        "confounded",
+        "stale",
+        "missing",
+        "low_count",
+        "metric_drift",
+        "composition_shift",
+        "late_data",
+        "budget",
+        "forbidden"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "confounders": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      },
+      "maxItems": 20
+    },
+    "plan_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "pattern": "^demo://"
+    },
+    "config_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "pattern": "^demo://"
+    },
+    "cohort_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "pattern": "^demo://"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    }
+  },
+  "additionalProperties": false,
+  "$comment": "domain.validate_input also enforces cross-field windows, metric-specific thresholds and finite numbers."
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Command envelope v1",
+  "type": "object",
+  "required": [
+    "command",
+    "data",
+    "actor",
+    "key",
+    "expected_version"
+  ],
+  "properties": {
+    "command": {
+      "enum": [
+        "create",
+        "validate",
+        "arm",
+        "complete",
+        "measure",
+        "review",
+        "propose",
+        "cancel",
+        "advance"
+      ]
+    },
+    "data": {
+      "type": "object"
+    },
+    "actor": {
+      "enum": [
+        "action-owner",
+        "metric-owner",
+        "observer"
+      ]
+    },
+    "key": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "expected_version": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": false,
+  "$comment": "domain.mutation enforces command-specific fields, role and lifecycle rules."
+}

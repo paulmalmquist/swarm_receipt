@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+data/
+*.sqlite*
+*.db
+*-artifacts/
+node_modules/
+.env*
+.DS_Store

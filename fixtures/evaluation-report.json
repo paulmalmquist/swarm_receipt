@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "total": 56,
+  "dataset_hash": "f011bc3d7faf152d910297232a481b6380c10f2b39bf02ca941e516ecba1f472",
+  "development": {
+    "total": 28,
+    "correct": 28,
+    "status_confusion": {
+      "improved": {
+        "improved": 6
+      },
+      "harmed": {
+        "harmed": 5
+      },
+      "no_change": {
+        "no_change": 5
+      },
+      "inconclusive": {
+        "inconclusive": 9
+      },
+      "denied": {
+        "denied": 3
+      }
+    },
+    "attribution_confusion": {
+      "matched_comparison": {
+        "matched_comparison": 16
+      },
+      "none": {
+        "none": 10
+      },
+      "associated_only": {
+        "associated_only": 2
+      }
+    }
+  },
+  "held_out": {
+    "total": 28,
+    "correct": 28,
+    "status_confusion": {
+      "improved": {
+        "improved": 6
+      },
+      "harmed": {
+        "harmed": 5
+      },
+      "no_change": {
+        "no_change": 5
+      },
+      "inconclusive": {
+        "inconclusive": 9
+      },
+      "denied": {
+        "denied": 3
+      }
+    },
+    "attribution_confusion": {
+      "matched_comparison": {
+        "matched_comparison": 16
+      },
+      "none": {
+        "none": 10
+      },
+      "associated_only": {
+        "associated_only": 2
+      }
+    }
+  },
+  "errors": [],
+  "forbidden_positive": 0,
+  "baseline": {
+    "current_process": null,
+    "reason": "No work baseline available; measure prospectively in shadow mode."
+  },
+  "inconclusive": 18,
+  "denied": 6,
+  "synthetic_query_bytes": 102400,
+  "reviewer_time": null,
+  "limits": "Synthetic regression fixtures; no estimate of real-world performance, causality or statistical confidence.",
+  "predictions": [
+    {
+      "id": "clean-01",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-02",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-03",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-04",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-05",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-06",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-07",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-08",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-09",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-10",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-11",
+      "partition": "development",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "clean-12",
+      "partition": "held_out",
+      "status": "improved",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_threshold_met"
+      ]
+    },
+    {
+      "id": "harm-01",
+      "partition": "development",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "guardrail_regression"
+      ]
+    },
+    {
+      "id": "harm-02",
+      "partition": "held_out",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_regression"
+      ]
+    },
+    {
+      "id": "harm-03",
+      "partition": "development",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "guardrail_regression"
+      ]
+    },
+    {
+      "id": "harm-04",
+      "partition": "held_out",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_regression"
+      ]
+    },
+    {
+      "id": "harm-05",
+      "partition": "development",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "guardrail_regression"
+      ]
+    },
+    {
+      "id": "harm-06",
+      "partition": "held_out",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_regression"
+      ]
+    },
+    {
+      "id": "harm-07",
+      "partition": "development",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "guardrail_regression"
+      ]
+    },
+    {
+      "id": "harm-08",
+      "partition": "held_out",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_regression"
+      ]
+    },
+    {
+      "id": "harm-09",
+      "partition": "development",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "guardrail_regression"
+      ]
+    },
+    {
+      "id": "harm-10",
+      "partition": "held_out",
+      "status": "harmed",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "primary_regression"
+      ]
+    },
+    {
+      "id": "null-01",
+      "partition": "development",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-02",
+      "partition": "held_out",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-03",
+      "partition": "development",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-04",
+      "partition": "held_out",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-05",
+      "partition": "development",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-06",
+      "partition": "held_out",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-07",
+      "partition": "development",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-08",
+      "partition": "held_out",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-09",
+      "partition": "development",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "null-10",
+      "partition": "held_out",
+      "status": "no_change",
+      "attribution": "matched_comparison",
+      "reasons": [
+        "below_materiality_threshold"
+      ]
+    },
+    {
+      "id": "confounded-01",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "confounded-02",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "cohort_composition_shift",
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "confounded-03",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "associated_only",
+      "reasons": [
+        "weak_comparison_design"
+      ]
+    },
+    {
+      "id": "confounded-04",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "associated_only",
+      "reasons": [
+        "weak_comparison_design"
+      ]
+    },
+    {
+      "id": "confounded-05",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "confounded-06",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "confounded-07",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "cohort_composition_shift",
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "confounded-08",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "associated_only",
+      "reasons": [
+        "weak_comparison_design"
+      ]
+    },
+    {
+      "id": "confounded-09",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "associated_only",
+      "reasons": [
+        "weak_comparison_design"
+      ]
+    },
+    {
+      "id": "confounded-10",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "unresolved_confounders"
+      ]
+    },
+    {
+      "id": "invalid-01",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "incomplete_evidence",
+        "missing_or_duplicate_observations"
+      ]
+    },
+    {
+      "id": "invalid-02",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "stale_or_future_evidence"
+      ]
+    },
+    {
+      "id": "invalid-03",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "insufficient_sample"
+      ]
+    },
+    {
+      "id": "invalid-04",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "metric_binding_mismatch"
+      ]
+    },
+    {
+      "id": "invalid-05",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "metric_binding_mismatch"
+      ]
+    },
+    {
+      "id": "invalid-06",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "metric_binding_mismatch"
+      ]
+    },
+    {
+      "id": "invalid-07",
+      "partition": "development",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "missing_or_duplicate_observations"
+      ]
+    },
+    {
+      "id": "invalid-08",
+      "partition": "held_out",
+      "status": "inconclusive",
+      "attribution": "none",
+      "reasons": [
+        "incomplete_evidence",
+        "late_arriving_evidence",
+        "missing_or_duplicate_observations"
+      ]
+    },
+    {
+      "id": "forbidden-01",
+      "partition": "development",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "policy_forbidden"
+      ]
+    },
+    {
+      "id": "forbidden-02",
+      "partition": "held_out",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "query_budget_exceeded"
+      ]
+    },
+    {
+      "id": "forbidden-03",
+      "partition": "development",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "identity_forbidden"
+      ]
+    },
+    {
+      "id": "forbidden-04",
+      "partition": "held_out",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "policy_forbidden"
+      ]
+    },
+    {
+      "id": "forbidden-05",
+      "partition": "development",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "query_budget_exceeded"
+      ]
+    },
+    {
+      "id": "forbidden-06",
+      "partition": "held_out",
+      "status": "denied",
+      "attribution": "none",
+      "reasons": [
+        "identity_forbidden"
+      ]
+    }
+  ]
+}

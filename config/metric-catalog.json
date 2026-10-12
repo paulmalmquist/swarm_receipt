@@ -1,0 +1,59 @@
+{
+  "quality": {
+    "label": "Quality triage",
+    "primary": {
+      "id": "false_positive_rate",
+      "version": "v3",
+      "unit": "ratio",
+      "grain": "inspection",
+      "direction": "lower"
+    },
+    "guardrail": {
+      "id": "miss_rate",
+      "version": "v2",
+      "unit": "ratio",
+      "grain": "inspection",
+      "direction": "lower"
+    },
+    "threshold": 0.05,
+    "guardrail_limit": 0.01
+  },
+  "query": {
+    "label": "Query performance",
+    "primary": {
+      "id": "query_duration",
+      "version": "v1",
+      "unit": "seconds",
+      "grain": "query",
+      "direction": "lower"
+    },
+    "guardrail": {
+      "id": "query_error_rate",
+      "version": "v1",
+      "unit": "ratio",
+      "grain": "query",
+      "direction": "lower"
+    },
+    "threshold": 5.0,
+    "guardrail_limit": 0.01
+  },
+  "lineage": {
+    "label": "Evidence coverage",
+    "primary": {
+      "id": "evidence_coverage",
+      "version": "v1",
+      "unit": "ratio",
+      "grain": "action",
+      "direction": "higher"
+    },
+    "guardrail": {
+      "id": "stale_evidence_rate",
+      "version": "v1",
+      "unit": "ratio",
+      "grain": "action",
+      "direction": "lower"
+    },
+    "threshold": 0.05,
+    "guardrail_limit": 0.01
+  }
+}

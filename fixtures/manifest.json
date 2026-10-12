@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "total": 56,
+  "development": 28,
+  "held_out": 28,
+  "dataset_hash": "f011bc3d7faf152d910297232a481b6380c10f2b39bf02ca941e516ecba1f472",
+  "groups": {
+    "clean": 12,
+    "harm": 10,
+    "null": 10,
+    "confounded": 10,
+    "invalid": 8,
+    "forbidden": 6
+  },
+  "notes": "Fixed labels authored independently of evaluator outputs; synthetic holdout partition is a regression check, not an independent statistical validation."
+}
